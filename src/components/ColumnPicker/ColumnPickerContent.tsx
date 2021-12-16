@@ -56,7 +56,7 @@ const useStyles = makeStyles(
       },
       display: "grid",
       gridColumnGap: theme.spacing(3),
-      gridTemplateColumns: "repeat(3, 1fr)",
+      gridTemplateColumns: "repeat(3, 210px)",
       padding: theme.spacing(2, 3)
     },
     contentContainer: {
@@ -67,6 +67,14 @@ const useStyles = makeStyles(
     },
     dropShadow: {
       boxShadow: `0px -5px 10px 0px ${theme.palette.divider}`
+    },
+    label: {
+      "& span": {
+        overflow: "hidden",
+        whiteSpace: "nowrap",
+        textOverflow: "ellipsis"
+      },
+      marginRight: 0
     },
     loadMoreLoaderContainer: {
       alignItems: "center",
@@ -141,6 +149,7 @@ const ColumnPickerContent: React.FC<ColumnPickerContentProps> = props => {
           <div className={classes.content}>
             {columns.map(column => (
               <ControlledCheckbox
+                className={classes.label}
                 checked={isSelected(
                   column.value,
                   selectedColumns,
