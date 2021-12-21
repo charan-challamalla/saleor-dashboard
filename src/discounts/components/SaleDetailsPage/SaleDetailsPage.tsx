@@ -141,7 +141,6 @@ const SaleDetailsPage: React.FC<SaleDetailsPageProps> = ({
   toggleAll
 }) => {
   const intl = useIntl();
-  const classes = useStyles();
   const {
     makeChangeHandler: makeMetadataChangeHandler
   } = useMetadataChangeTrigger();
@@ -177,7 +176,7 @@ const SaleDetailsPage: React.FC<SaleDetailsPageProps> = ({
             <Backlink onClick={onBack}>
               {intl.formatMessage(sectionNames.sales)}
             </Backlink>
-            <PageHeader className={classes.wrapAnywhere} title={sale?.name} />
+            <PageHeader title={sale?.name} />
             <Grid>
               <div>
                 <SaleInfo
