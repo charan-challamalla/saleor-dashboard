@@ -33,7 +33,6 @@ import DiscountProducts from "../DiscountProducts";
 import DiscountVariants from "../DiscountVariants";
 import SaleInfo from "../SaleInfo";
 import SaleSummary from "../SaleSummary";
-import { useStyles } from "../SaleSummary/styles";
 import SaleType from "../SaleType";
 import SaleValue from "../SaleValue";
 
